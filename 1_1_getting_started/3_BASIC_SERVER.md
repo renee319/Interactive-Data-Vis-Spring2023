@@ -3,6 +3,7 @@
 To assist with development, we can serve our files locally to view them as we code. If you are interested about this process, you can read more about servers [here](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work), [here](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server), and [here](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server).
 
 
+
 ## Option 1: VS Code Server
 
 Our first integrated option within our editor is a code extension called [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer). This option allows you to launch a server directly in VS Code.
