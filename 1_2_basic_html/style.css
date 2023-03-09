@@ -15,6 +15,40 @@ h3 {
   margin: 0.25em 0;
 }
 
+.abcd {
+  width: 200px;
+  border-style: solid;
+}
+
 p {
   font-size: 1em;
+}
+
+.tablestyle {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  color: gray;
+  background-color: pink;
+  border-style: solid;
+  padding: 10px;
 }
