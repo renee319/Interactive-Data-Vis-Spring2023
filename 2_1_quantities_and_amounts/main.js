@@ -11,7 +11,6 @@ d3.csv('../data/squirrelActivities.csv', d3.autoType)
 
     /* HTML ELEMENTS */
     /** Select your container and append the visual elements to it */
-
     const svg = d3.select("#container")
       .append('svg')
       .attr("width", width)
@@ -21,7 +20,7 @@ d3.csv('../data/squirrelActivities.csv', d3.autoType)
     /** This is where you should define your scales from data to pixel space */
     const yScale = d3.scaleBand()
       .domain(['running', 'chasing', 'climbing', 'eating', 'foraging'])
-      .range([margin, width - margin])
+      .range([margin, height - margin])
       .padding(0.1)
 
     // console.log(xScale)
@@ -59,7 +58,7 @@ d3.csv('../data/squirrelActivities.csv', d3.autoType)
     const yAxis = d3.axisLeft(yScale)
 
     svg.append("g")
-      .style("transform", `translate(0px, ${width - margin}px`)
+      .style("transform", `translate(0px, ${height - margin}px`)
       .call(xAxis)
 
     svg.append("g")
