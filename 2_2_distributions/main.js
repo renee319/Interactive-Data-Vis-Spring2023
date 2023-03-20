@@ -24,6 +24,10 @@ d3.csv("../data/usHeatExtremes.csv", d3.autoType)
   .domain([Math.min(...data.map((d => d["Change in 95 percent Days"]))), Math.max(...data.map((d => d["Change in 95 percent Days"])))])
   .range(["#ff0000", "#ee1100", "#dd2200","#cc3300","#bb4400","#aa5500","#996600","#887700", "#778800","#669900","#55aa00","#44bb00","#33cc00", "#22dd00", "#11ff00"].reverse())
 
+  const radiusScale = d3.scaleLinear()
+  .domain([Math.min(...data.map((d => d["Change in 95 percent Days"]))), Math.max(...data.map((d => d["Change in 95 percent Days"])))])
+  .range([2, 6])
+
   /* HTML ELEMENTS */
   const svg = d3.select("#container")
   .append("svg")
@@ -45,7 +49,7 @@ d3.csv("../data/usHeatExtremes.csv", d3.autoType)
     exit => exit
   )
   .attr("class", "dot")
-  .attr("r", radius)
+  .attr("r", d => radiusScale( d["Change in 95 percent Days"]))
   .attr("cx", d => xScale(d.Lat))
   .attr("cy", d => yScale(d.Long))
   .style("fill", d => colorScale(d["Change in 95 percent Days"]))
