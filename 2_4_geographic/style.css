@@ -19,7 +19,12 @@ p {
 }
 
 .heat {
-  stroke-width: 0.25;
-  stroke:#171717;
-  
+}
+
+.states {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  pointer-events: all;
+  float: left;
+  cursor: crosshair;
 }
