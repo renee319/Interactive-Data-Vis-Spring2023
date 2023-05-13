@@ -1,5 +1,9 @@
 /* CONSTANTS AND GLOBALS */
-// const width = ,
+const width = window.innerWidth * 0.7,
+  height = window.innerHeight * 0.7,
+  margin = { top: 20, bottom: 60, left: 60, right: 40 },
+  radius = 5;
+  
 //   height = ,
 //   margin = ,
 //   radius = ;
@@ -30,12 +34,31 @@ d3.json("../data/environmentRatings.json", d3.autoType).then(raw_data => {
 // this will be run *one time* when the data finishes loading in
 function init() {
   // + SCALES
+  xScale = d3.scaleLinear()
+  .domain(d3.extent(state.data, d => d.ideologyScore2020))
+  .range([margin.left, width - margin.right])
 
+  yScale = d3.scaleLinear()
+  .domain(d3.extent(state.data, d => d.envScore2020))
+  .range([height - margin.bottom, margin.bottom])
 
+  colorScale = d3.scaleOrdinal()
+    .domain(["R", "D"])
+    .range(["red", "d"])
+
+      // are there independent? 
+      const filterData = state.data.filter((d) => d.log )
   // + AXES
 
 
   // + UI ELEMENT SETUP
+  const selectElement = d3.select("#dropdown")
+   .data("ALL", "Democrat" , "Republican")
+   .join("option")
+   .attr("value", d=>d )
+   .html(d=>d)
+   .on('change' , (event)=>{
+    console. log('selected' , event.target.value)})
 
 
   // + CREATE SVG ELEMENT
@@ -61,10 +84,12 @@ function draw() {
     .data(filteredData, d => d.BioID)
     .join(
       // + HANDLE ENTER SELECTION
-      enter => enter,
+      enter => enter.append("circle")
+      .attr("cx", d => xScale(d.ideologyScore2020))
 
       // + HANDLE UPDATE SELECTION
       update => update,
+      
 
       // + HANDLE EXIT SELECTION
       exit => exit

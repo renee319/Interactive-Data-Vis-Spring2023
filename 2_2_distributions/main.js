@@ -1,57 +1,69 @@
 /* CONSTANTS AND GLOBALS */
 const width = window.innerWidth * 0.7,
-      height = window.innerHeight * 0.7,
-      margin = {top: 20, left: 60, bottom: 60, right: 20},
-      radius = 3;
+  height = window.innerHeight * 0.7,
+  margin = { top: 20, bottom: 60, left: 60, right: 40 },
+  radius = { min: 1, max:15};
+  colors = {national: '#0000FF', american: '#FF0000'}
 
 /* LOAD DATA */
-d3.csv("../data/usHeatExtremes.csv", d3.autoType)
+d3.csv('../data/mlbSeasonStats.csv', d3.autoType)
   .then(data => {
-  console.log(data, )
-  
-  /* SCALES */
-  const xScale = d3.scaleLinear()
-  .domain([Math.min(...data.map((d => d.Lat))), Math.max(...data.map((d => d.Lat)))])
-  .range([margin.left, width - margin.right])
+    console.log(data)
 
-  const yScale = d3.scaleLinear()
-  .domain([Math.min(...data.map((d => d.Long))), Math.max(...data.map((d => d.Long)))])
-  .range([height - margin.bottom, margin.top])
-  
-  // Color Scale
-  const colorScale = d3.scaleOrdinal()
-  // red changes more, green changes less, blue is ocean
-  .domain([Math.min(...data.map((d => d["Change in 95 percent Days"]))), Math.max(...data.map((d => d["Change in 95 percent Days"])))])
-  .range(["#ff0000", "#ee1100", "#dd2200","#cc3300","#bb4400","#aa5500","#996600","#887700", "#778800","#669900","#55aa00","#44bb00","#33cc00", "#22dd00", "#11ff00"].reverse())
+    /* SCALES */
+    const xScale = d3.scaleLinear()
+    .domain([d3.min(data.map(d => d.strikeouts)), d3.max(data.map(d => d.strikeouts))])
+    .range([margin.left, width - margin.right])
 
-  const radiusScale = d3.scaleLinear()
-  .domain([Math.min(...data.map((d => d["Change in 95 percent Days"]))), Math.max(...data.map((d => d["Change in 95 percent Days"])))])
-  .range([2, 6])
+    const yScale = d3.scaleLinear()
+    .domain([d3.min(data, d => d.homeruns), d3.max(data, d => d.homeruns)])
+    .range([height - margin.bottom, margin.top])
 
-  /* HTML ELEMENTS */
-  const svg = d3.select("#container")
-  .append("svg")
-  .attr("width", width)
-  .attr("height", height)
-  .style("background-color", "Blue")
+    const colorScale = d3.scaleOrdinal()
+    .domain(["National", "American"])
+    .range([colors.national, colors.american, "blue"])
 
-  const dots = svg.selectAll(".dot")
-  .data(data)
-  .join("circle")
-  .join(
-    enter => enter.append("circle")
-    .call(selection => 
-      selection
-      .transition()
-      .duration(1000)
-      .attr("r", radius)),
-    update => update,
-    exit => exit
-  )
-  .attr("class", "dot")
-  .attr("r", d => radiusScale( d["Change in 95 percent Days"]))
-  .attr("cx", d => xScale(d.Lat))
-  .attr("cy", d => yScale(d.Long))
-  .style("fill", d => colorScale(d["Change in 95 percent Days"]))
+    const sizeScale = d3.scaleSqrt()
+    .domain([d3.min(data, d => d.wins), d3.max(data, d => d.wins)])
+    .range([radius.min, radius.max])
+    console.log(sizeScale)
 
-});
+    const svg = d3.select("#container")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+
+    const xAxis = d3.axisBottom(xScale)
+    svg.append("g")
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(xAxis);
+
+    const yAxis = d3.axisLeft(yScale)
+    svg.append("g")
+      .attr("transform", `translate(${margin.left},0)`)
+      .call(yAxis);
+    
+    const dot = svg
+    .selectAll("circle")
+    .data(data, d => d.team) 
+    .join("circle")
+    .attr("cx", d => xScale(d.strikeouts))
+    .attr("cy", d => yScale(d.homeruns))
+    .attr("r", d => sizeScale(d.wins))
+    .attr("fill", d => colorScale(d.league))
+    .attr("class", "bubble")
+
+    // team labels for circles
+    const teamLabels = svg
+    .selectAll(".team-labels")
+    .data(data, d => d.teamAbbrev)
+    .join("text")
+    .attr("x", d => xScale(d.strikeouts))
+    .attr("y", d => yScale(d.homeruns))
+    .text(d => d.teamAbbrev)
+    .attr("text-anchor", "left")
+    //.attr("class", "team-labels")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "10px")
+    .attr("fill", "gray");
+  });

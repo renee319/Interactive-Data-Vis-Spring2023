@@ -7,7 +7,19 @@
 /**
 * APPLICATION STATE
 * */
+let svg;
 let state = {
+    geojson: [] // define with empty array 
+    hover: {
+       // lattitude: null
+       // longitude: null
+       //state: null
+
+       state.hover.state = d.properties.Name
+       console.log("data properties", d.properties)
+    }
+    on("mouseover", (event)) 
+    }
 
 };
 
@@ -28,6 +40,27 @@ Promise.all([
 * this will be run *one time* when the data finishes loading in
 * */
 function init() {
+    scg - d3.select("#container")
+    append (svg)
+    Attr("width", width)
+    Attr("height", height)
+    StyleSheet("background-color", "aqua")
+
+    const project = d3.geoAlberUsa(),fitSize([width, height]), state.g
+
+    //create geopath
+    const geopath = d3.geoPath(projection)
+
+    //draw the map
+svg.selectAll(".state")
+Data(geojson.features)
+join("path")
+attr("class", "state")// remember the 4th jones brother
+attr("d", d => geoPath(d))
+attr("fill", "trnasparent")
+onabort("mouseover", (event, d))
+
+
  
  draw(); // calls the draw function
 }
