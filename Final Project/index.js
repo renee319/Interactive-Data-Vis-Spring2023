@@ -1,6 +1,6 @@
-import ColumnChart from "/src/generateColumnChart.js";
-import LineChart from "/src/generateLineChart.js";
-import PieChart from "/src/generatePieChart.js";
+import ColumnChart from "/Interactive-Data-Vis-Spring2023/Final%20Project/src/generateColumnChart.js";
+import LineChart from "/Interactive-Data-Vis-Spring2023/Final%20Project/src/generateLineChart.js";
+import PieChart from "/Interactive-Data-Vis-Spring2023/Final%20Project/src/generatePieChart.js";
 
 document.querySelector("#app").innerHTML = `
   <div>
