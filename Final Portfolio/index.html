@@ -11,43 +11,58 @@
       <h1 id="headline">Interactive Data Visualization Portfolio</h1>
       <div class="intro-container">
         <div class="section-header">Final project reflection</div>
-        <div class="section-subhead">Abstract</div>
+        <div class="section-subhead">introduction</div>
         <p>
-          Americans formed new businesses in historic numbers during the pandemic. Monthly business applications spiked to the highest level on record in early 2020 and haven’t slowed since. 
+          What is Education Attainment? 
+
+Education attainment refers to the level of education that an individual has completed. It is typically measured in terms of degrees or diplomas earned, such as a high school diploma, a bachelor's degree, a master's degree, or a doctoral degree. Education attainment is often used as a key indicator of an individual's knowledge, skills, and abilities, and it is used by employers, policymakers, and researchers to make decisions about things like job qualifications, educational programs, and funding allocations.
+
         </p>
         <p>
-          This dashboard will allow users to explore the U.S. Census Bureau’s Business Formation Statistics data and better understand and explain who and what is driving this trend.
+         I am exploring the U.S. Census Educational Attainment Data Educational Attainment in the United States: 2020 table package use statistics from the Current Population Surveys Annual Social and Economic Supplement to examine the educational to examine the educational attainment of adults aged 25 and over by demographic and social characteristics, such as age, sex, race, to understand and analysis who and what is driving different trend. 
         </p>
         <div class="section-subhead">Design decision and process</div>
         <p>
-          I aimed to strike a balance in this piece of providing top-level insights that readers could glean at a glance while offering tools for users to dig deeper into the data. 
+         I aimed to strike a delicate balance in this piece, offering readers both high-level insights at a glance and tools to delve deeper into the data.And I used bar chart, pie chart and line chart to understanding the following questions 
+
         </p>
         <p>
-          Part of this is achieved through the dashboard component at the bottom of the page, which gives users the ability to filter and highlight data by category and series. But another, key component is the smaller chart that readers see upon landing on the page; this longer-term view gives readers a sense of the overall trend and prepares readers for the more granular data further down the page.
-        </p>
+          Questions include: · What is the education attainment percentage from 2010 and later in the number of man and woman? 
+                             · What does educational attainment look like across different races? Is there a gap between White, Black, Asian, and Hispanic populations for individuals aged 25 years and over who have completed 4 years of college or more between 2000 and 2022? If so, what percentage difference exists? Additionally, what is the gap in educational attainment for different races among individuals aged 25 years and over who have completed 4 years of high school or more?
+
+                             ·Which industry employs the most people with a high school degree? What about those with an associate degree, bachelor's degree, master's degree, professional degree, and doctoral degree? Additionally, what is the relationship between industry choice and educational attainment level?
+
+
+
+
+
+
+       </p>
         <p>
-          In the future, I plan to add an additional step to my design process. In this project I went from a high-level wireframe straight into building the piece with code. In hindsight, I should have built every piece of the dashboard – each filtered category, in this case – into the wireframe, to get a better sense of how all of the pieces would fit together holistically. If I’d done so, I might have avoided a late change to my project, which involved removing one of the categories from the dashboard, performing additional data analysis, and adding a new chart at the top.
+          In future projects, I plan to incorporate an additional step in my design process. Rather than transitioning directly from a high-level wireframe to coding, I will ensure that each component of the dashboard, including filtered categories, is thoroughly integrated into the wireframe. This approach will provide a more comprehensive understanding of how all the pieces fit together holistically. By doing so, I can avoid potential late-stage changes, such as removing a category from the dashboard, conducting additional data analysis. 
         </p>
         <div class="section-subhead">Learning and takeaways</div>
         <p>
-          From a process perspective, my biggest learning was about the value of working through the design process prior to building. I was eager to start coding in order to finish the project on time, but after piecing together my initial draft, I realized that the project needed reworking. It not only took more time to go back and add additional components, but it made my code messier and less readable. Rather than thinking through a smart approach to expand my script to account for these additional components, I rushed through and hard-coded many elements.
+         
+From a process perspective, my most significant learning experience was recognizing the value of working through the design process before starting to build. Initially, I had the idea to create a project focusing on "Women in STEM." However, as I began piecing together my initial draft, I realized that the project was too challenging for my current skill level. Not only did it take more time to retroactively add additional components, but it also resulted in messy and less readable code. Consequently, I made the decision to abandon my initial idea and start afresh, opting for a project centered around educational attainment in the Census. And thankfully this time work! 
         </p>
         <p>
-          From a technical perspective, I learned a lot about mouse interactions and enabling tooltips on busy charts that contain many elements. At the start of the process, I thought adding tooltips on a multi-line chart, like <a href="https://observablehq.com/@d3/multi-line-chart">this Observable notebook</a>, would be a long shot and that I’d likely go without any hover interaction. I ended up getting tooltips (and the closest data point) to show on hover in a relatively smooth fashion using a voronoi overlay, and I think it added a lot to the project.
+          From a technical standpoint, I acquired valuable knowledge regarding mouse interactions and the implementation of tooltips in complex charts with numerous elements.By delving into the technical aspects of D3.js, I can gain a deeper understanding of data visualization principles, data building, Data Transformation and Manipulation,Animations and interactive design, enabling me to create powerful and engaging visualizations.
         </p>
         <div class="section-subhead">Learning and takeaways</div>
         <p>
-          As mentioned above, my code is not as clean, readable, and reproducible as I’d like it to be. With more time, I would have liked to refactor it to make some of its components more reusable for future projects. Or ideally, I would have planned my project better so that I could have worked toward this from the start.
+          As previously mentioned, I acknowledge that my code lacks the desired level of cleanliness, readability, and reproducibility. Given more time, I would have prioritized refactoring certain components to enhance reusability for future projects. Ideally, I would have planned my project more meticulously to incorporate these considerations from the outset.
+
+
         </p>
         <p>
-          I’d also like to focus more on animation in future projects, or in another iteration of this project. When switching between categories using the dashboard’s user interface, the data is properly filtered, the axes transition, and new lines appear, but the lines do not transition in a meaningful way. 
+          in future projects or a subsequent iteration of this project, I intend to place a greater emphasis on incorporating animation. Currently, when switching between categories using the dashboard's user interface, the data is appropriately filtered, and the axes smoothly transition, but the lines representing the data do not animate in a meaningful way. Addressing this aspect would contribute to a more engaging and visually appealing user experience.
         </p>
         <p>
-          To help reinforce the enter/update/exit concept and test out different types of transitions, I completed <a href="https://naterattner.com/Interactive-Data-Vis-Fall2022/3_2_distributions/index.html">tutorial 3-2</a>. The transitions done there – such as shrinking the circles so that they “disappear” off the page – feel more valuable for the user than what I have in my final project.
+          
         </p>
         <p>
-          In another iteration of this project, I’d like to animate each line’s path so that the chart is “redrawn” when the data is filtered, as shown in <a href="https://observablehq.com/@onoratod/animate-a-path-in-d3">this notebook</a>. This would reinforce the idea that new data is being flowed into the chart when each category button is clicked.
-        </p>
+          
       </div>
     </div>
   </body>
