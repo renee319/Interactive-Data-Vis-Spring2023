@@ -1,0 +1,58 @@
+Category;Characteristic;Total;None - 8th grade;9th - 11th grade;High school graduate;Some college - no degree;Associate's degree;Bachelor's degree;Master's degree;Professional degree;Doctoral degree
+Total;Total;116.296;3.895;5.695;31.383;16.900;13.057;27.853;13.725;1.584;2.203
+Marital Status;Married, spouse present;62.890;1.858;2.300;15.533;7.992;7.036;16.917;8.787;1.027;1.439
+Marital Status;Married, spouse absent, not separated;1.719;97;121;519;265;165;344;162;15;30
+Marital Status;Separated;2.434;165;258;745;424;289;359;150;11;34
+Marital Status;Widowed;11.478;777;908;4.519;1.777;1.018;1.603;672;89;115
+Marital Status;Divorced;14.538;364;796;3.856;2.734;2.147;2.803;1.438;170;230
+Marital Status;Never married;23.237;633;1.311;6.211;3.709;2.402;5.827;2.516;271;355
+Household Relationship;Family householder;39.974;1.090;2.135;10.001;6.570;4.883;9.160;4.830;517;789
+Household Relationship;Married, spouse present;25.486;618;937;5.761;3.756;3.000;6.678;3.739;379;617
+Household Relationship;Other family householder;14.488;472;1.198;4.240;2.814;1.882;2.482;1.091;137;172
+Household Relationship;Nonfamily householder;22.806;708;1.133;6.035;3.891;2.568;5.089;2.665;309;406
+Household Relationship;Living alone;19.988;659;1.005;5.387;3.492;2.262;4.244;2.309;274;354
+Household Relationship;Living with nonrelatives;2.818;49;127;648;399;306;845;356;36;52
+Household Relationship;Relative of householder;47.528;1.937;2.098;13.608;5.592;4.979;12.053;5.656;698;906
+Household Relationship;Spouse;35.068;954;1.168;8.875;3.994;3.847;9.841;4.949;633;807
+Household Relationship;Other;12.460;983;930;4.733;1.598;1.132;2.212;708;65;99
+Household Relationship;Nonrelative;5.989;159;330;1.739;848;627;1.551;573;60;102;;;;;;;;;
+Nativity;Native born;94.974;1.179;3.976;25.706;15.117;11.448;23.121;11.501;1.245;1.682
+Nativity;Native parentage;85.626;1.027;3.573;23.506;13.736;10.454;20.540;10.270;1.066;1.454
+Nativity;Foreign or mixed parentage;9.348;152;403;2.200;1.381;994;2.582;1.231;179;228
+Citizenship;Foreign born;21.321;2.716;1.719;5.677;1.784;1.610;4.732;2.224;339;522
+Citizenship;Naturalized citizen;11.732;1.010;625;3.105;1.097;1.096;2.958;1.307;233;300
+Citizenship;Not a citizen;9.589;1.706;1.094;2.572;687;514;1.773;917;105;222
+Year of entry;2010 or later;5.631;534;396;1.349;436;356;1.466;836;87;171
+Year of entry;2000-2009;5.280;707;491;1.427;404;349;1.105;582;83;132
+Year of entry;1990-1999;4.560;618;400;1.254;386;334;1.025;371;78;92
+Year of entry;1980-1989;3.013;442;252;797;270;303;609;221;50;70
+Year of entry;1970-1979;1.628;259;107;442;154;143;315;141;29;39
+Year of entry;Before 1970;1.209;158;73;408;133;124;212;73;11;17
+Labor Force Status;Employed;64.922;1.081;1.869;13.957;8.920;7.892;18.562;9.771;1.156;1.715
+Labor Force Status;Unemployed;1.967;63;157;635;305;246;410;111;18;21
+Labor Force Status;Not in civilian labor force;49.406;2.750;3.668;16.792;7.675;4.919;8.882;3.843;409;467
+Occupation (Employed Civilians Only);Employed Civilians;64.922;1.081;1.869;13.957;8.920;7.892;18.562;9.771;1.156;1.715
+Occupation (Employed Civilians Only);Management, business, and financial occupations;12.260;59;95;1.436;1.454;1.082;5.073;2.650;160;252
+Occupation (Employed Civilians Only);Professional and related occupations;20.462;6;52;1.266;1.330;2.353;7.355;5.824;899;1.378
+Occupation (Employed Civilians Only);Service occupations;11.152;603;924;4.262;1.951;1.602;1.471;267;50;21
+Occupation (Employed Civilians Only);Sales and related occupations;5.580;66;202;1.659;1.006;714;1.547;355;15;17
+Occupation (Employed Civilians Only);Office and administrative occupations;10.512;46;192;3.200;2.364;1.651;2.473;523;23;39
+Occupation (Employed Civilians Only);Farming, forestry, and fishing occupations;173;48;27;39;15;13;31;1;0;0
+Occupation (Employed Civilians Only);Construction and extraction occupations;315;20;34;116;48;40;47;6;5;0
+Occupation (Employed Civilians Only);Installation, maintenance, and repair occupations;176;0;15;74;40;24;11;11;0;0
+Occupation (Employed Civilians Only);Production occupations;2.098;148;152;979;320;162;259;68;2;8
+Occupation (Employed Civilians Only);Transportation and material moving occupations;2.194;85;174;926;393;251;295;67;3;1
+Industry (Employed Civilians Only);Employed Civilians;64.922;1.081;1.869;13.957;8.920;7.892;18.562;9.771;1.156;1.715
+Industry (Employed Civilians Only);Agricultural, forestry, fishing, and hunting;537;68;42;144;70;62;110;33;4;4
+Industry (Employed Civilians Only);Mining;79;4;0;10;10;7;40;1;0;7
+Industry (Employed Civilians Only);Construction;1.105;32;51;335;225;133;264;57;8;0
+Industry (Employed Civilians Only);Manufacturing;4.230;130;171;1.304;592;366;1.155;415;21;77
+Industry (Employed Civilians Only);Wholesale and retail trade;6.825;127;304;2.256;1.178;889;1.580;372;29;91
+Industry (Employed Civilians Only);Transportation and utilities;2.331;21;80;808;415;307;528;154;15;2
+Industry (Employed Civilians Only);Information;1.018;3;8;100;116;97;449;210;13;23
+Industry (Employed Civilians Only);Financial activities;5.476;16;57;1.046;1.028;593;1.948;697;47;44
+Industry (Employed Civilians Only);Professional and business services;7.875;142;229;1.391;956;686;2.752;1.170;305;245
+Industry (Employed Civilians Only);Educational and health services;24.387;198;452;3.538;2.622;3.314;6.981;5.618;578;1.085
+Industry (Employed Civilians Only);Leisure and hospitality;4.169;228;264;1.483;681;410;878;184;21;20
+Industry (Employed Civilians Only);Other services;3.478;93;167;1.023;551;558;734;293;30;30
+Industry (Employed Civilians Only);Public administration;3.411;19;44;519;476;470;1.142;568;86;86
